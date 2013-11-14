@@ -72,7 +72,6 @@ module Prawn
           min_widths[cell.column] =
             [min_widths[cell.column], cell.min_width].max
         end
-        min_widths[column] = [min_widths[column], min_width_ignoring_span].max
         min_widths.values.inject(0, &:+)
       end
 
